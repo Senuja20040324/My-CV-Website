@@ -1,179 +1,542 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Senuja Rasmina</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <title>Senuja Ramina | Software Engineering Undergraduate</title>
+    <meta name="description" content="Portfolio of Senuja Ramina, Software Engineering Undergraduate">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%237c3aed'/><text x='50' y='68' font-family='monospace' font-weight='900' font-size='42' fill='white' text-anchor='middle'>KC</text></svg>">
 </head>
 <body>
 
-  <!-- ========== NAVIGATION ========== -->
-  <nav>
-    <div class="container">
-      <a href="#hero" class="logo">SR.</a>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+    <!-- ─── Navigation ─── -->
+    <header id="header">
+        <nav class="navbar">
+            <a href="#home" class="logo"><span class="logo-bracket">&lt;</span>SR<span class="logo-bracket">/&gt;</span></a>
+            <ul class="nav-links" id="navMenu">
+                <li><a href="#home"      class="nav-link active"><span class="nav-num">01</span>Home</a></li>
+                <li><a href="#about"     class="nav-link"><span class="nav-num">02</span>About</a></li>
+                <li><a href="#resume"    class="nav-link"><span class="nav-num">03</span>Resume</a></li>
+                <li><a href="#skills"    class="nav-link"><span class="nav-num">04</span>Skills</a></li>
+                <li><a href="#projects"  class="nav-link"><span class="nav-num">05</span>Projects</a></li>
+                <li><a href="#contact"   class="nav-link nav-link--cta">Contact Me</a></li>
+                <div class="nav-menu-socials">
+                    <a href="https://github.com/kAvindu-gh" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/kavindu-chandupa-b255212a7/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </ul>
+            <div class="nav-overlay" id="navOverlay"></div>
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
 
-  <!-- ========== HERO ========== -->
-  <section id="hero">
-    <div class="container">
-      <div>
-        <h1>Hi, I'm<br/>Senuja Rasmina.</h1>
-        <p class="subtitle">Software Engineering Undergraduate · Sri Lanka</p>
-        <div class="hero-links">
-          <a href="#projects" class="btn btn-primary">View my work</a>
-          <a href="#contact" class="btn btn-outline">Get in touch</a>
+    <main>
+        <!-- ─── Hero ─── -->
+        <section id="home" class="hero">
+            <canvas id="particles-canvas"></canvas>
+            <div class="hero-noise"></div>
+
+            <div class="hero-left">
+                <div class="hero-tag reveal-up">
+                    <span class="tag-dot"></span>
+                    <span>Available for internships · 2026</span>
+                </div>
+
+                <h1 class="hero-name reveal-up" style="--d:.1s">
+                    <span class="name-line">Senuja</span>
+                    <span class="name-line name-accent">Rasmina</span>
+                </h1>
+
+                <div class="hero-role reveal-up" style="--d:.2s">
+                    <span class="role-prefix">I build</span>
+                    <span class="role-typed"><span id="typed"></span><span class="cursor-blink">|</span></span>
+                </div>
+
+                <p class="hero-bio reveal-up" style="--d:.3s">
+                    Second-year SE undergraduate at IIT affiliated with University of Westminster. Passionate about crafting elegant, scalable software — from pixel-perfect frontends to robust backend systems.
+                </p>
+
+                <div class="hero-actions reveal-up" style="--d:.4s">
+                    <a href="#projects" class="cta-primary">
+                        <span>View Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="mailto:kavinduchandupa856@gmail.com" class="cta-secondary">Hire Me</a>
+                </div>
+
+                <div class="hero-socials reveal-up" style="--d:.5s">
+                    <a href="https://github.com/Senuja20040324" target="_blank" class="h-social"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/senuja-rasmina-62396a352/" target="_blank" class="h-social"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="tel:+94701351093" class="h-social"><i class="fas fa-phone"></i></a>
+                    <a href="mailto:senuja.rasmina.pro@gmail.com" class="h-social"><i class="fas fa-envelope"></i></a>
+                    <div class="social-line"></div>
+                </div>
+            </div>
+
+            <div class="hero-right" style="--d:.2s">
+                <div class="hero-img-frame">
+                    <div class="frame-corner fc-tl"></div>
+                    <div class="frame-corner fc-tr"></div>
+                    <div class="frame-corner fc-bl"></div>
+                    <div class="frame-corner fc-br"></div>
+                    <div class="frame-scan"></div>
+                    <img src="Mama_Pro.png" alt="Senuja Rasmina" class="hero-photo">
+                    <div class="img-overlay"></div>
+                </div>
+                <div class="hero-stat-cards">
+                    <div class="stat-card">
+                        <span class="stat-num">2+</span>
+                        <span class="stat-label">Years Coding</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">4+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">8+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-cue">
+                <div class="scroll-line"></div>
+                <span>scroll</span>
+            </div>
+        </section>
+
+        <!-- ─── About ─── -->
+        <section id="about" class="about">
+            <div class="about-inner">
+                <div class="about-visual reveal-left">
+                    <div class="av-card">
+                        <div class="av-header">
+                            <span class="av-dot r"></span><span class="av-dot y"></span><span class="av-dot g"></span>
+                            <span class="av-file">about.json</span>
+                        </div>
+                        <div class="av-code">
+                            <div class="code-line"><span class="c-br">{</span></div>
+                            <div class="code-line pl"><span class="c-key">"name"</span><span class="c-cl">:</span> <span class="c-str">"Senuja Rasmina"</span><span class="c-cl">,</span></div>
+                            <div class="code-line pl"><span class="c-key">"role"</span><span class="c-cl">:</span> <span class="c-str">"SE Undergraduate"</span><span class="c-cl">,</span></div>
+                            <div class="code-line pl"><span class="c-key">"location"</span><span class="c-cl">:</span> <span class="c-str">"Kadawatha, Sri Lanka"</span><span class="c-cl">,</span></div>
+                            <div class="code-line pl"><span class="c-key">"languages"</span><span class="c-cl">:</span> <span class="c-br">[</span><span class="c-str">"English"</span><span class="c-cl">,</span> <span class="c-str">"Sinhala"</span><span class="c-br">]</span><span class="c-cl">,</span></div>
+                            <div class="code-line pl"><span class="c-key">"phone"</span><span class="c-cl">:</span> <span class="c-str">"+94 70 135 1093"</span><span class="c-cl">,</span></div>
+                            <div class="code-line pl"><span class="c-key">"status"</span><span class="c-cl">:</span> <span class="c-bool">true</span><span class="c-cl">,</span></div>
+                            <div class="code-line pl"><span class="c-key">"open_to"</span><span class="c-cl">:</span> <span class="c-str">"internships"</span></div>
+                            <div class="code-line"><span class="c-br">}</span></div>
+                        </div>
+                    </div>
+                    <div class="about-counters">
+                        <div class="ac-item">
+                            <span class="ac-num" data-target="2">0</span><span class="ac-plus">+</span>
+                            <span class="ac-label">Yrs Coding</span>
+                        </div>
+                        <div class="ac-item">
+                            <span class="ac-num" data-target="4">0</span><span class="ac-plus">+</span>
+                            <span class="ac-label">Stacks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content reveal-right">
+                    <div class="section-title left-align">
+                        <span class="section-tag">WHO I AM</span>
+                        <h2>About <span class="gradient-text">Me</span></h2>
+                    </div>
+                    <p class="about-p">I'm a dedicated Software Engineering undergraduate at IIT, affiliated with the University of Westminster. My passion lies in bridging elegant design with robust functionality — building web interfaces people love to use and backend systems that scale.</p>
+                    <p class="about-p">I'm currently seeking an internship to take my academic foundations into real-world practice, contribute to meaningful projects, and grow as a professional developer.</p>
+                    <div class="about-tags">
+                        <span><i class="fas fa-map-marker-alt"></i> Kadawatha, Sri Lanka</span>
+                        <span><i class="fas fa-phone"></i> +94 70 135 1093</span>
+                        <span><i class="fas fa-language"></i> English &amp; Sinhala</span>
+                        <span><i class="fas fa-graduation-cap"></i> SE Undergraduate</span>
+                    </div>
+                    <a href="mailto:senuja.rasmina.pro@gmail.com" class="cta-primary">
+                        <span>Get In Touch</span><i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Resume ─── -->
+        <section id="resume" class="resume-section">
+            <div class="resume-bg-orb orb1"></div>
+
+            <div class="section-title reveal">
+                <span class="section-tag">MY CREDENTIALS</span>
+                <h2>Resume &amp; <span class="gradient-text">Experience</span></h2>
+            </div>
+
+            <div class="resume-layout">
+
+                <!-- Left: CV mockup -->
+                <div class="resume-preview-wrap reveal-left">
+                    <div class="resume-doc">
+                        <div class="resume-doc-topbar">
+                            <div class="doc-dots">
+                                <span class="dd r"></span><span class="dd y"></span><span class="dd g"></span>
+                            </div>
+                            <span class="doc-filename"><i class="fas fa-file-pdf"></i> Senuja_Rasmina_CV.pdf</span>
+                            <div class="doc-pages">1 / 1</div>
+                        </div>
+                        <div class="resume-doc-body">
+                            <div class="cv-header-mock">
+                                <div class="cv-avatar-mock"></div>
+                                <div class="cv-title-mock">
+                                    <div class="cv-line thick w80"></div>
+                                    <div class="cv-line w60"></div>
+                                    <div class="cv-line thin w90"></div>
+                                </div>
+                            </div>
+                            <div class="cv-divider"></div>
+                            <div class="cv-section-mock">
+                                <div class="cv-section-label">EDUCATION</div>
+                                <div class="cv-line w70"></div>
+                                <div class="cv-line thin w85"></div>
+                                <div class="cv-line thin w60"></div>
+                            </div>
+                            <div class="cv-section-mock">
+                                <div class="cv-section-label">SKILLS</div>
+                                <div class="cv-pills-mock">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="cv-section-mock">
+                                <div class="cv-section-label">PROJECTS</div>
+                                <div class="cv-line w75"></div>
+                                <div class="cv-line thin w90"></div>
+                                <div class="cv-line thin w65"></div>
+                            </div>
+                            <div class="cv-section-mock">
+                                <div class="cv-section-label">CONTACT</div>
+                                <div class="cv-line w55"></div>
+                                <div class="cv-line thin w70"></div>
+                            </div>
+                            <div class="cv-scan-line"></div>
+                        </div>
+                    </div>
+                    <div class="resume-doc-glow"></div>
+                </div>
+
+                <!-- Right: minimal info + CTA -->
+                <div class="resume-info reveal-right">
+
+                    <div class="resume-tagline">
+                        <h3>Kavindu Chandupa</h3>
+                        <p>Software Engineering Undergraduate at IIT · University of Westminster. Seeking an internship to contribute and grow in a professional environment.</p>
+                    </div>
+
+                    <div class="resume-cta-group">
+                        <a href="assets/Kavindu_Chandupa_CV.pdf" target="_blank" class="resume-cta-view">
+                            <i class="fas fa-eye"></i> View Resume
+                        </a>
+                        <a href="assets/Kavindu_Chandupa_CV.pdf" download="Kavindu_Chandupa_CV.pdf" class="resume-cta-dl">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+
+                    <div class="resume-divider"></div>
+
+                    <div class="resume-meta-row">
+                        <div class="resume-meta-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span><b>Degree</b> · BEng (Hons) Software Engineering</span>
+                        </div>
+                        <div class="resume-meta-item">
+                            <i class="fas fa-university"></i>
+                            <span><b>University</b> · University of Westminster via IIT</span>
+                        </div>
+                        <div class="resume-meta-item">
+                            <i class="fas fa-circle" style="color:#4ade80;font-size:.5rem"></i>
+                            <span><b>Status</b> · Open to internships · 2026</span>
+                        </div>
+                    </div>
+
+                    <div class="resume-updated">
+                        <i class="fas fa-clock"></i> Last updated · June 2026
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Skills ─── -->
+        <section id="skills" class="skills-section">
+            <div class="skills-bg-glow skills-glow-1"></div>
+            <div class="skills-bg-glow skills-glow-2"></div>
+            <div class="section-title reveal">
+                <span class="section-tag">WHAT I KNOW</span>
+                <h2>Technical <span class="gradient-text">Skills</span></h2>
+            </div>
+
+            <!-- No percentage labels — bars only -->
+            <div class="skill-bars-grid reveal-up">
+                <div class="skill-bar-item" data-pct="85">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-html5"></i> HTML5</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="85" style="--d:.06s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-css3-alt"></i> CSS3</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="70" style="--d:.12s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-js"></i> JavaScript</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="75" style="--d:.18s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-java"></i> Java</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="78" style="--d:.24s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-python"></i> Python</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="70" style="--d:.30s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-git-alt"></i> Git &amp; GitHub</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="75" style="--d:.36s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fas fa-mobile-alt"></i> SQL</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="65" style="--d:.42s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fas fa-fire"></i> Firebase Firestore</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="65" style="--d:.48s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fas fa-database"></i> MySQL</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="30" style="--d:.54s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-react"></i> Microsoft Excel</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="25" style="--d:.60s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fas fa-database"></i> Microsoft Power BI</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="25" style="--d:.66s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-docker"></i> OOP </span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+            </div>
+
+            <div class="grouped-skills-grid reveal-up">
+                <div class="skill-category-card glass">
+                    <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Databases &amp; Backend</h3>
+                    <div class="skill-pills">
+                        <span class="pill">Firebase</span><span class="pill">MySQL</span><span class="pill">SQLite</span>
+                        <span class="pill">PostgreSQL</span><span class="pill">FastAPI</span>
+                    </div>
+                </div>
+                <div class="skill-category-card glass">
+                    <div class="card-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>Dev Tools &amp; Workflow</h3>
+                    <div class="skill-pills">
+                        <span class="pill">Git</span><span class="pill">GitHub</span><span class="pill">VS Code</span>
+                        <span class="pill">IntelliJ</span><span class="pill">Postman</span><span class="pill">Docker</span>
+                        <span class="pill">Figma</span><span class="pill">Notion</span>
+                    </div>
+                </div>
+                <div class="skill-category-card glass">
+                    <div class="card-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>Platforms &amp; Environments</h3>
+                    <div class="skill-pills">
+                        <span class="pill">Windows</span><span class="pill">Android</span>
+                        <span class="pill">iOS</span><span class="pill">PyCharm</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Projects ─── -->
+        <section id="projects" class="projects">
+            <div class="section-title reveal">
+                <span class="section-tag">WHAT I BUILD</span>
+                <h2>Featured <span class="gradient-text">Projects</span></h2>
+            </div>
+
+            <div class="proj-cards">
+
+                <!-- 01 NutriFlex -->
+                <div class="proj-feat reveal-up">
+                    <div class="proj-feat-img">
+                        <img src="assets/project_nutriflex.png" alt="NutriFlex" onerror="this.style.display='none';this.closest('.proj-feat-img').classList.add('no-img')">
+                        <div class="proj-feat-noimg"><i class="fas fa-apple-alt"></i></div>
+                        <div class="proj-feat-num">01</div>
+                    </div>
+                    <div class="proj-feat-info">
+                        <div class="proj-feat-meta">
+                            <span class="proj-feat-cat">Mobile · SDGP</span>
+                            <span class="proj-feat-year">2025/26</span>
+                        </div>
+                        <h3>NutriFlex</h3>
+                        <p>A mobile nutrition app built specifically for Sri Lankans — because no existing app knows what Mallum or Ambul Thiyal is. Select your daily meal plate from real local food data, track calories, protein, carbs and fat in real time, and get BMI-aware macro targets personalised to your health conditions.</p>
+                        <div class="proj-feat-stack">
+                            <span>Flutter</span><span>Python</span><span>FastAPI</span><span>Firebase</span>
+                        </div>
+                        <div class="proj-feat-links">
+                            <a href="https://github.com/kAvindu-gh/nutriflex" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://www.sdgp.lk/project/db34acb8-ec0f-4092-a289-74eddfeec8b4" target="_blank"><i class="fas fa-globe"></i> Sdgp.lk</a>
+                            <a href="https://nutri-flex.com/" target="_blank" class="proj-feat-live"><i class="fas fa-external-link-alt"></i> Landing Page</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 02 Memory Glitch Runner -->
+                <div class="proj-feat proj-feat--flip reveal-up" style="--d:.1s">
+                    <div class="proj-feat-img">
+                        <img src="assets/project_memory_glitch_runner.png" alt="Memory Glitch Runner" onerror="this.style.display='none';this.closest('.proj-feat-img').classList.add('no-img')">
+                        <div class="proj-feat-noimg"><i class="fas fa-gamepad"></i></div>
+                        <div class="proj-feat-num">02</div>
+                    </div>
+                    <div class="proj-feat-info">
+                        <div class="proj-feat-meta">
+                            <span class="proj-feat-cat">Web · Game</span>
+                            <span class="proj-feat-year">2026</span>
+                        </div>
+                        <h3>Memory Glitch Runner</h3>
+                        <p>A 2D browser platformer where your failed runs become ghost echoes that help solve puzzles. Jump across bars, avoid falling into lava, and progress through three progressively harder difficulty levels to reach the final exit. Built entirely with vanilla JavaScript and the Web Audio API.</p>
+                        <div class="proj-feat-stack">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Web Audio API</span>
+                        </div>
+                        <div class="proj-feat-links">
+                            <a href="https://github.com/kAvindu-gh/memory-glitch-runner" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="proj-feat-live"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 03 Climate Actions -->
+                <div class="proj-feat reveal-up" style="--d:.2s">
+                    <div class="proj-feat-img">
+                        <img src="assets/project_climate_actions.png" alt="Climate Actions Web" onerror="this.style.display='none';this.closest('.proj-feat-img').classList.add('no-img')">
+                        <div class="proj-feat-noimg"><i class="fas fa-leaf"></i></div>
+                        <div class="proj-feat-num">03</div>
+                    </div>
+                    <div class="proj-feat-info">
+                        <div class="proj-feat-meta">
+                            <span class="proj-feat-cat">Web</span>
+                            <span class="proj-feat-year">2025</span>
+                        </div>
+                        <h3>Climate Actions Website</h3>
+                        <p>An informational and interactive website raising awareness about climate change and sustainability actions. Features a clean responsive layout, animated sections, and smooth UI interactions — built entirely with pure HTML, CSS and JavaScript without any external libraries.</p>
+                        <div class="proj-feat-stack">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                        </div>
+                        <div class="proj-feat-links">
+                            <a href="https://github.com/kAvindu-gh/climate-actions-web" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://kavindu-gh.github.io/climate-actions-web/" target="_blank" class="proj-feat-live"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 04 Coming Soon -->
+                <div class="proj-feat proj-feat--coming reveal-up" style="--d:.3s">
+                    <div class="proj-feat-coming-inner">
+                        <div class="proj-feat-coming-icon"><i class="fas fa-layer-group"></i></div>
+                        <div>
+                            <h3>Flowforge Workflow Builder</h3>
+                            <p>A full-stack project currently in the works — details coming soon.</p>
+                        </div>
+                        <div class="proj-coming-dots"><span></span><span></span><span></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Contact ─── -->
+        <section id="contact" class="contact">
+            <div class="contact-inner">
+                <div class="contact-left reveal-left">
+                    <div class="section-title left-align">
+                        <span class="section-tag">LET'S TALK</span>
+                        <h2>Get In <span class="gradient-text">Touch</span></h2>
+                    </div>
+                    <p class="contact-subtext">I'm actively looking for internship opportunities and exciting projects. Whether you have a question or just want to say hi — my inbox is always open!</p>
+
+                    <div class="contact-items">
+                        <a href="mailto:senuja.rasmina.pro@gmail.com" class="c-item">
+                            <div class="c-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="c-detail">
+                                <span class="c-label">Email</span>
+                                <span class="c-val">senuja.rasmina.pro@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+94769075404" class="c-item">
+                            <div class="c-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="c-detail">
+                                <span class="c-label">Phone</span>
+                                <span class="c-val">+94 7O 135 1093</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/senuja-rasmina-62396a352/" target="_blank" class="c-item">
+                            <div class="c-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div class="c-detail">
+                                <span class="c-label">LinkedIn</span>
+                                <span class="c-val">senuja-rasmina</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Senuja20040324" target="_blank" class="c-item">
+                            <div class="c-icon"><i class="fab fa-github"></i></div>
+                            <div class="c-detail">
+                                <span class="c-label">GitHub</span>
+                                <span class="c-val">Senuja20040324</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal-right" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <input type="text" id="fname" placeholder=" " required>
+                            <label for="fname">Your Name</label>
+                        </div>
+                        <div class="form-field">
+                            <input type="email" id="femail" placeholder=" " required>
+                            <label for="femail">Email Address</label>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <input type="text" id="fsubject" placeholder=" " required>
+                        <label for="fsubject">Subject</label>
+                    </div>
+                    <div class="form-field">
+                        <textarea id="fmsg" rows="5" placeholder=" " required></textarea>
+                        <label for="fmsg">Message</label>
+                    </div>
+                    <button type="submit" class="cta-primary btn-full" id="submitBtn">
+                        <span>Send Message</span><i class="fas fa-paper-plane"></i>
+                    </button>
+                    <p class="form-success" id="formSuccess">✓ Message sent! I'll get back to you soon.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ─── Footer ─── -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <a href="#home" class="footer-logo"><span class="logo-bracket">&lt;</span>KC<span class="logo-bracket">/&gt;</span></a>
+            <p class="footer-copy">&copy; 2026 develop by <span>Kavindu Chandupa.</span></p>
+            <div class="footer-links">
+                <a href="https://github.com/kAvindu-gh" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kavindu-chandupa-b255212a7/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
         </div>
-      </div>
-      <div class="avatar">SR</div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- ========== ABOUT ========== -->
-  <section id="about">
-  <div class="container fade-in">
-    <h2>About me</h2>
-    <p>
-      I'm an undergraduate Software Engineering student with a passion for
-      building things for the web. I enjoy writing clean code and learning
-      new technologies. I'm currently looking for internship opportunities
-      where I can apply my skills and grow as a developer.
-    </p>
-  </div>
-</section>
-
-  <!-- ========== SKILLS ========== -->
-  <section id="skills">
-    <div class="container fade-in">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-tag">HTML</div>
-        <div class="skill-tag">CSS</div>
-        <div class="skill-tag">JavaScript</div>
-        <div class="skill-tag">SQL</div>
-        <div class="skill-tag">Git & GitHub</div>
-        <div class="skill-tag">Figma</div>
-        <div class="skill-tag">Java</div>
-        <div class="skill-tag">Python</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== EXPERIENCE ========== -->
-  <section id="experience">
-  <div class="container fade-in">
-    <h2>Experience</h2>
-    <p style="color: var(--color-muted);">
-      Currently seeking my first industry opportunity. In the meantime,
-      I've been building personal projects and strengthening my skills
-      through self-study and university coursework.
-    </p>
-  </div>
-</section>
-
-  <!-- ========== PROJECTS ========== -->
-  <section id="projects">
-  <div class="container fade-in">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-
-      <div class="project-card">
-        <h3>NutriFlex – Smart Nutrition & Meal Planning App</h3>
-        <p>
-          A mobile app for gym users and fitness-conscious individuals.
-          Provides personalized meal plans based on height, weight, and goals,
-          with AI-based recipe recommendations, calorie estimation, and
-          doctor-guided nutrition support.
-        </p>
-        <div class="project-tags">
-          <span class="tag">Python</span>
-          <span class="tag">Flutter</span>
-          <span class="tag">FastAPI</span>
-          <span class="tag">Firebase</span>
-        </div>
-        <div class="project-links">
-          <a href="#">GitHub</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <!-- ========== EDUCATION ========== -->
-  <section id="education">
-    <div class="container fade-in">
-      <h2>Education</h2>
-      <div class="education-list">
-
-        <div class="education-item">
-          <div class="year">2025 — Present</div>
-          <div>
-            <h3>BEng in Software Engineering</h3>
-            <div class="school">Informatics Institute of Technology</div>
-          </div>
-        </div>
-
-        <div class="education-item">
-          <div class="year">2026 — Present</div>
-          <div>
-            <h3>ICM - iCET CERTIFIED MASTER</h3>
-            <div class="school">Institute of Computer Engineering Technology</div>
-          </div>
-        </div>
-
-        <div class="education-item">
-          <div class="year">2021 — 2024 </div>
-          <div>
-            <h3>G.C.E Advanced Level (Physical Science)<br>
-   
-               Physics - C pass<br>
-               Combined Maths - S pass<br>
-               ICT - C pass</h3>
-            <div class="school">Galahitiyawa Central College, Ganemulla</div>
-          </div>
-        </div>
-
-        <div class="education-item">
-          <div class="year">2026 — Present</div>
-          <div>
-            <h3>G.C.E Ordinary Level</h3>
-            <div class="school">Jayakody Maha Vidyalaya, Ganemulla</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CONTACT ========== -->
-  <section id="contact">
-    <div class="container fade-in">
-      <h2>Get in touch</h2>
-      <p style="color: var(--color-muted); margin-bottom: 24px;">
-        Open to freelance work and full-time opportunities.
-      </p>
-      <div class="contact-links">
-        <a href="mailto:senuja.rasmina.pro@gmail.com" class="btn btn-primary">Email me</a>
-        <a href="https://github.com/Senuja20040324" class="btn btn-outline" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/senuja-rasmina-62396a352/" class="btn btn-outline" target="_blank">LinkedIn</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer>
-    <p>Built by Senuja Rasmina · 2025</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <button id="backToTop" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+    <script src="script.js"></script>
 </body>
 </html>
